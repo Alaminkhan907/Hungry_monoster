@@ -1,8 +1,9 @@
 function callApi(meal) {
-    // const web = "http://api.openweathermap.org/data/2.5/weather";
-    // const key = "108cf238dd5beb2cab700ba003f03797";
-    // const url = `${web}?q=${city}&appid=${key}`;
-     fetch('https://www.themealdb.com/images/ingredients/Lime.png')
+    const web = "https://www.themealdb.com/api/json/v1/1/search.php";
+    const foodName = meal
+    const url = `${web}?s=${foodName}`;
+    console.log(url);
+     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
