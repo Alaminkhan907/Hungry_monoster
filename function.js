@@ -6,7 +6,7 @@ function callApi(meal) {
      fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        displayMeals(data);
         
       })
       .catch(error =>alert("Wrong Food Name"))
@@ -15,4 +15,12 @@ function callApi(meal) {
     const inputFood = document.getElementById("input-food").value;
     console.log(inputFood);
     callApi(inputFood);
+  }
+  function displayMeals(mealData){
+      console.log(mealData);
+      const foodName= mealData['meals'][0]['strMeal'];
+      const foodPhoto = mealData['meals'][0]['strMealThumb'];
+      console.log(foodPhoto);
+      console.log(foodName);
+
   }
