@@ -1,3 +1,7 @@
 footer {
   text-align: center;
 }
+#meal-photo img {
+  width: 180px;
+  border-radius: 5px;
+}
